@@ -31,6 +31,7 @@ export default () => {
         <div>
             测试useEffect： { count }
             <Button type="primary" onClick={() => setCount(count+1)}>click change</Button>
+            <br/><hr/><br/>
         </div>
     )
 }
