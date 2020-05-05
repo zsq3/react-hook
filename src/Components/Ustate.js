@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Button } from 'element-react';
 
 export default () => {
-    const [count, setCount] = useState(10);  //可以设置数字类型
-    const [person, setPerson] = useState({ name: 'zzz', age: 18 }); //可以设置对象类型
-    const [arr, setArr] = useState([]);  //可以是数组类型，默认空数组
-    const [fn, setFn] = useState(() => '函数默认返回值');   //函数类型
+    let [count, setCount] = useState(10);  //可以设置数字类型
+    let [person, setPerson] = useState({ name: 'zzz', age: 18 }); //可以设置对象类型
+    let [arr, setArr] = useState([]);  //可以是数组类型，默认空数组
+    let [fn, setFn] = useState(() => '函数默认返回值');   //函数类型
 
 
 

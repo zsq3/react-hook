@@ -8,8 +8,8 @@ import { Button } from 'element-react';
 
 
 export default () => {
-    const [count, setCount] = useState(1);
-    const [age, setAge] = useState(18);
+    let [count, setCount] = useState(1);
+    let [age, setAge] = useState(18);
     let [list, setList] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,8 @@ export default () => {
         return () => { //组件卸载时执行的回调。 即专门给 componentWillUnMount 写的return函数
             //clearInterval(timer)
         }
-    }, [age]);   //比如这里如果指定监听age, 那么下面点击按钮改变count是不会执行useEffect的回调的，但是页面数据还是重新渲染了
+    }, [age]);   //比如这里如果指定监听age, 那么下面点击按钮改变count是不会执行useEffect的回调的，
+                 // 但是页面数据还是重新渲染了,useMemo可以控制不渲染
 
 
 
